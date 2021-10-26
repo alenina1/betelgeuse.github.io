@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>osipyan_web</title>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- header not necessary -->
+  <header>
+    <div class="header"> 
+     <h1> spacestore </h1> 
+  </div>
+  </header>
+
+  <div class="constr"> 
+    <!-- text not necessary -->
+      <div class="content">
+       <p> here you can choose one of our rockets to buy. or use other services, in the lower calculator you will have the opportunity to choose one of the presented missiles, or a specific service, or a complete set.</p>
+        <div class="photos">
+          <div class="p1 mb-2 pb-1"> 
+          <img src="img/rocket.jpg" alt="rocket" width="250px" height="250px">
+          <h2> starship (2.09bln$) </h2>
+          <p>designed for reusable transportation of more than 100 tons of cargo to earth orbit</p></div>
+          <div class="p1 mt-2 mb-2 pb-1"> 
+          <img src="img/falcon9.jpg" alt="rocket" width="250px" height="250px">
+          <h2> falcon 9 (90mln$)</h2>
+          <p>used to launch satellites and transport people. has a reusable launch stage that returns to the ground by autopilot. can fly to other planets and even into the deep space.</p> </div>
+          <div class="p1 pb-1"> 
+          <img src="img/rocket3.jpg" alt="rocket" width="250px" height="250px">
+          <h2> falcon heavy (95mln$) </h2>
+          <p>super-heavy launch vehicle with reusable first stage. the most modernized rocket at the moment.capable of transporting goods to other planets with the possibility of returning to earth. </p></div>
+        </div>
+      </div>
+  </div>    
+      <!-- calculator without options -->
+    <form class="calc1 mt-2 text-center d-flex justify-content-center row g-3">
+      <h2 id="calc">calculator</h2>
+      <div class="outp"> 
+      <output class="form-control text-center" name="result" id="result" ></output>
+      </div>
+      <div class="col-auto">
+        <input type="text" class="form-control" id="price" placeholder="price">
+      </div>
+      <div class="col-auto">
+        <input type="text" class="form-control" id="value" placeholder="quantity">
+      </div>
+      <div class="col-auto">
+        <button type="button" class="btn mb-3" onclick="return total()" id="result-btn"  >cost of your purchase without delivery</button>
+      </div>
+      </div>
+    </form> 
+
+    <div class="calc2 text-center сontainer__calc p-2 mt-2 ">
+      <h2 id="calc">services</h2>
+      <form>
+        <!-- selector -->
+        <input class="form-control text-center" type="text" id="select_input" value="" placeholder="quantity">
+        <select class="form-control text-center" name="type" id="select">
+          <option value="1" id="starship"> starship </option>
+          <option value="2" id="ComplexWash">falcon heavy</option>
+          <option value="3" id="Detail">falcon 9</option>
+        
+        </select>
+
+        <!-- radio -->
+        <div id="radio_div">
+          <input type="radio" name="radio_options" id="radio_id" onMouseDown="this.isChecked=this.checked;"
+            onClick="this.checked=!this.isChecked; " />
+          <input class="form-check-input" type="radio" name="radio_options" value="delivery"
+            onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;" /> delivery
+          <input class="form-check-input" type="radio" name="radio_options" value="taxi"
+            onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;" /> taxi
+          <input class="form-check-input" type="radio" name="radio_options" value="deepcosmos"
+            onMouseDown="this.isChecked=this.checked;" onClick="this.checked=!this.isChecked;" /> deep cosmos travel
+        </div>
+        <!-- check options -->
+        <div id="check_div">
+          <input class="form-check-input " type="checkbox" name="seats" id="seats" /> 40+ people
+          <input class="form-check-input" type="checkbox" name="engine" id="engine" /> additional engine
+          <input class="form-check-input" type="checkbox" name="spaceship" id="spaceship" /> spaceship
+        </div>
+        <br />
+      </form>
+      <h5 id="price2"></h5>
+    </div>
+   
+    <footer class="footer">
+      <div class="content">
+          <div class="footrow">
+              <div class="footext">
+                  osipyan alina 2021
+              </div> 
+          </div>
+      </div>           
+  </footer>
+  <!-- JavaScript and dependencies -->
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+
+</html>
