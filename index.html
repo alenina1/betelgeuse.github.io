@@ -13,7 +13,7 @@
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -31,15 +31,15 @@
        <p> here you can choose one of our rockets to buy. or use other services, in the lower calculator you will have the opportunity to choose one of the presented missiles, or a specific service, or a complete set.</p>
         <div class="photos">
           <div class="p1 mb-2 pb-1"> 
-          <img src="img/rocket.jpg" alt="rocket" width="250px" height="250px">
+          <img src="img/rocket.jpg" alt="rocket" >
           <h2> starship (2.09bln$) </h2>
           <p>designed for reusable transportation of more than 100 tons of cargo to earth orbit</p></div>
           <div class="p1 mt-2 mb-2 pb-1"> 
-          <img src="img/falcon9.jpg" alt="rocket" width="250px" height="250px">
+          <img src="img/falcon9.jpg" alt="rocket" >
           <h2> falcon 9 (90mln$)</h2>
           <p>used to launch satellites and transport people. has a reusable launch stage that returns to the ground by autopilot. can fly to other planets and even into the deep space.</p> </div>
           <div class="p1 pb-1"> 
-          <img src="img/rocket3.jpg" alt="rocket" width="250px" height="250px">
+          <img src="img/rocket3.jpg" alt="rocket" >
           <h2> falcon heavy (95mln$) </h2>
           <p>super-heavy launch vehicle with reusable first stage. the most modernized rocket at the moment.capable of transporting goods to other planets with the possibility of returning to earth. </p></div>
         </div>
@@ -47,7 +47,7 @@
   </div>    
       <!-- calculator without options -->
     <form class="calc1 mt-2 text-center d-flex justify-content-center row g-3">
-      <h2 id="calc">calculator</h2>
+      <h2 id="calc1">calculator</h2>
       <div class="outp"> 
       <output class="form-control text-center" name="result" id="result" ></output>
       </div>
@@ -60,11 +60,10 @@
       <div class="col-auto">
         <button type="button" class="btn mb-3" onclick="return total()" id="result-btn"  >cost of your purchase without delivery</button>
       </div>
-      </div>
     </form> 
 
     <div class="calc2 text-center сontainer__calc p-2 mt-2 ">
-      <h2 id="calc">services</h2>
+      <h2 id="calc2">services</h2>
       <form>
         <!-- selector -->
         <input class="form-control text-center" type="text" id="select_input" value="" placeholder="quantity">
@@ -94,7 +93,7 @@
         </div>
         <br />
       </form>
-      <h5 id="price2"></h5>
+      
     </div>
    
     <footer class="footer">
